@@ -1,0 +1,10 @@
+pydantic
+fastapi
+PyPDF2
+io
+transformers
+huggingface_hub
+torch
+typing
+uvicorn
+re
