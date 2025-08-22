@@ -1,7 +1,7 @@
 fastapi==0.116.1
 pydantic==2.11.1
 pypdf==6.0.0
-transformers 
+transformers
 huggingface-hub==0.34.4
 torch==2.8.0
 uvicorn==0.35.0
