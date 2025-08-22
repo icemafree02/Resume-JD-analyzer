@@ -70,7 +70,6 @@ class ResumeAnalyzer:
         """
 
     def extract_resume_pdf(self, pdf_file) -> str:
-        """Extract text from PDF resume"""
         try:
             pdf_reader = PyPDF2.PdfReader(pdf_file)
             text = ""
@@ -81,7 +80,6 @@ class ResumeAnalyzer:
             raise HTTPException(status_code=400, detail="Failed to extract text from PDF")
 
     def llm_analyze(self, resume_text: str) -> Dict:
-        """Use Llama LLM to analyze resume"""
         prompt = f""" You are an expert resume analyzer for AI and Data Solution roles.
 
         Job Description:
@@ -173,7 +171,6 @@ class ResumeAnalyzer:
         resume_text = self.extract_resume_pdf(pdf_file)
         analysis = self.llm_analyze(resume_text)
         return AnalysisResult(**analysis)
-
 
 analyzer = ResumeAnalyzer()
 
